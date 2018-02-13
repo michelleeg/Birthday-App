@@ -1,52 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 this.getSign = function () {
         var date = new Date(birthdate);
         var month = date.getMonth();
@@ -126,7 +77,8 @@ this.getSign = function () {
         }
 
     }
-=======
+
+
 function age {
     this.birthDate = new Date(birthDate);
     var today = new Date();
@@ -135,4 +87,4 @@ function age {
     }
     return age;
 }
->>>>>>> origin/master
+
