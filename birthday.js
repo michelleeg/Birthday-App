@@ -6,6 +6,7 @@ function daysUntilBDay(birthday) {
 }
 
 
+var signButton = document.getElementByid("getSign");
 
 
 
@@ -85,7 +86,13 @@ this.getSign = function () {
         } else if (day > 21) {
             return "Capricorn";
         }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
     }
+signButton.addEventListener('click',getSign);
 
 }
 
