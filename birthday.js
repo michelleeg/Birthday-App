@@ -1,50 +1,12 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function daysUntilBDay(birthday) {
     var bDay = new Date(birthday);
     var today = new Date();
     var days = Math.floor((bDay.getTime() - today.getTime())/1000/60/60/24);
 }
-=======
+
+
+
+
 this.getSign = function () {
         var date = new Date(birthdate);
         var month = date.getMonth();
@@ -134,5 +96,3 @@ function age {
     }
     return age;
 }
-
->>>>>>> origin/master
