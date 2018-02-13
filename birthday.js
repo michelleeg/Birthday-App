@@ -5,6 +5,7 @@ function daysUntilBDay(birthday) {
 }
 
 
+var signButton = document.getElementByid("getSign");
 
 
 this.getSign = function () {
@@ -85,7 +86,9 @@ this.getSign = function () {
             }
         }
 
+
     }
+signButton.addEventListener('click',getSign);
 
 
 function age {
