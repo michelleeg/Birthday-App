@@ -1,7 +1,5 @@
 var signButton = document.getElementByid("getSign");
 
-
-
 this.getSign = function () {
     var date = new Date(birthdate);
     var month = date.getMonth();
