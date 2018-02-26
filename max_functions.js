@@ -27,3 +27,24 @@ if (today.getMonth > birthday.getMonth && today.getDate > birthday.getDate) {
 var one_day = 1000 * 60 * 60 * 24;
 console.log("There are " + Math.ceil((birthday.getTime() - today.getTime()) / (one_day)) + " days until your birthday!");
 
+
+
+
+
+
+var month = parseInt(prompt("What month were you born (1-12)", "") - 1);
+var day = parseInt(prompt("What day is your birthday (1-31)", ""));
+
+var birthday = new Date();
+var today = new Date();
+
+birthday.setDate(day);
+birthday.setMonth(month);
+
+birthday = birthday.getTime();
+today = today.getTime();
+if (birthday < today) { birthday.setFullYear(today.getFullYear() + 1); }
+var theDate = birthday - today;
+theDate = (((theDate / 1000) / 60) / 60) / 24;
+
+alert("It is " + theDate.toFixed(0) + " day(s) until your birthday");
