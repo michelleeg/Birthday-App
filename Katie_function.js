@@ -82,3 +82,13 @@ this.getSign = function () {
 signButton.addEventListener('click',getSign);
 
 }
+
+function displaySign(){
+    var result = getSign();
+     document.getElemtnById('signText').textContent = result;
+}
+
+signButton.addEventListener('click',getSign);
+
+var textButton = document.getElementById('age');
+
