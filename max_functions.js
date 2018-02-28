@@ -1,7 +1,9 @@
-function birthdayCountDown() {
+var countDown = document.getElementById('calculate');
+
+function bDayCountDown() {
 
     var today = new Date();
-    var bDay = new Date(document.getElementById('inputDate').value);
+    var bDay = new Date(document.getElementById('calculateCountdown').value);
     var currentime = today.getTime();
     var bDaytime = bDay.getTime();
 
@@ -20,3 +22,15 @@ function birthdayCountDown() {
     return daysuntil;
 
 }
+
+
+
+function dayDisplay() {
+    var days = birthdayCountDown();
+
+    document.getElementById('days').textContent = days;
+}
+
+countdown.addEventListener('click', dayDisplay);
+
+
