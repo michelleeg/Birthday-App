@@ -3,7 +3,7 @@ var countDown = document.getElementById('calculate');
 function bDayCountDown() {
 
     var today = new Date();
-    var bDay = new Date(document.getElementById('calculateCountdown').value);
+    var bDay = new Date(document.getElementById('inputDate').value);
     var currentime = today.getTime();
     var bDaytime = bDay.getTime();
 
