@@ -26,11 +26,9 @@ function bDayCountDown() {
 
 
 function dayDisplay() {
-    var days = birthdayCountDown();
+    var days = bDayCountDown();
 
     document.getElementById('days').textContent = days;
 }
 
-countdown.addEventListener('click', dayDisplay);
-
-
+countDown.addEventListener('click', dayDisplay);
