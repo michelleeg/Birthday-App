@@ -84,9 +84,38 @@ this.getSign = function () {
 signButton.addEventListener('click',getSign);
 
 }
-function daysUntilBDay(birthday) {
-    var bDay = new Date(birthday);
+
+var countDown = document.getElementById('calculate');
+
+function bDayCountDown() {
+
     var today = new Date();
-    var days = Math.floor((bDay.getTime() - today.getTime()) / 1000 / 60 / 60 / 24);
-    return days;
+    var bDay = new Date(document.getElementById('calculateCountdown').value);
+    var currentime = today.getTime();
+    var bDaytime = bDay.getTime();
+
+    if ((bDaytime - currentime) < 0) {
+
+        bDay.setFullYear(today.getFullYear());
+
+        if ((bDay.getTime() - today.getTime()) < 0) {
+            bDay.setFullYear(bDay.getFullYear() + 1);
+        }
+
+    }
+
+    var daysuntil = Math.ceil((bDay.getTime() / 86400000) - (today.getTime() / 86400000));
+
+    return daysuntil;
+
 }
+
+
+
+function dayDisplay() {
+    var days = birthdayCountDown();
+
+    document.getElementById('days').textContent = days;
+}
+
+countdown.addEventListener('click', dayDisplay);
