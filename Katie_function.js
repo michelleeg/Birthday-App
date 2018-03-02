@@ -1,4 +1,4 @@
-var signButton = document.getElementById('getSign');
+var signButton = document.getElementById('calculate');
 
 function getSign() {
     var date = new Date(document.getElementById('inputDate').value);

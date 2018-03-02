@@ -4,6 +4,7 @@ function bDayCountDown() {
 
     var today = new Date();
     var bDay = new Date(document.getElementById('inputDate').value);
+
     var currentime = today.getTime();
     var bDaytime = bDay.getTime();
 
@@ -26,7 +27,7 @@ function bDayCountDown() {
 
 
 function dayDisplay() {
-    var days = bDayCountDown();
+    var days = "There are " + bDayCountDown() + " day(s) until your birthday";
 
     document.getElementById('days').textContent = days;
 }
