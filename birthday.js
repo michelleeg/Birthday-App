@@ -1,11 +1,11 @@
-var signButton = document.getElementByid("getSign");
+var signButton = document.getElementById('calculate');
 
-
-
-this.getSign = function () {
-    var date = new Date(birthdate);
+function getSign() {
+    var date = new Date(document.getElementById('inputDate').value);
     var month = date.getMonth();
     var day = date.getDate();
+    var sign = "";
+
     if (month == 0) {
         if (day <= 20) {
             return "Capricorn";
@@ -81,9 +81,14 @@ this.getSign = function () {
 
     }
 
-signButton.addEventListener('click',getSign);
+};
 
+function displaySign() {
+    var result = getSign();
+    document.getElementById('signText').textContent = result;
 }
+
+signButton.addEventListener('click', displaySign);
 
 var countDown = document.getElementById('calculate');
 
