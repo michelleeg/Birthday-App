@@ -26,7 +26,7 @@ function bDayCountDown() {
 
 
 function dayDisplay() {
-    var days = "There are " + bDayCountDown() + " day(s) until your birthday";
+    var days = "There are " + bDayCountDown() + " days until your birthday";
 
     document.getElementById('days').textContent = days;
 }
