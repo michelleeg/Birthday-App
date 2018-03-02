@@ -1,15 +1,13 @@
 var button3 = document.getElementById('calculateAge');
 
-function calculateAge(inputNum) {
-    this.birthDate = new Date(birthDate);
+function calculateAge(inputBirthday) {
+    var birthday = new Date(inputBirthday);
     var today = new Date();
-    this.age = function () {
-        return Math.floor((new Date() - this.birthDate) / 1000 / 60 / 60 / 24 / 365);
-    }
+    return Math.floor((new Date() - birthday) / 1000 / 60 / 60 / 24 / 365);
 }
 
 function displayAge() {
-    var input = document.getElementById('inputNum').value;
+    var input = document.getElementById('inputBirthday').value;
     var age = calculateAge(input);
     document.getElementById('age').textContent = "You are" + calculateAge + "years of age.";
 }
