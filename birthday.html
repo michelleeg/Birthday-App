@@ -8,6 +8,7 @@
     html body {
         background-color: #A8D7FD;
     }
+
 </style>
 
 <body>
@@ -17,35 +18,15 @@
             Enter Your Birthdate:
             <br>
             <p>
-                <input type="text" id="inputDate">
+                <input type="text" id="inputDate"><br></br>
+                <div id="errorText"></div>
+                <button id="calculateAll">Press here!</button>
+                <div id="result"></div>
                 <br>
-                <p>
-                    <button id="calculate">Press here</button>
-                    <br>
-                    <hr/>
-                    <p>
-                        <hr3>We'll Calculate Your Age!</hr3>
-                        <div id="age"></div>
-                        <br>
-
-                        <hr/>
-
-                        <p>
-                            <hr3>Your Astrological Sign!</hr3>
-                            <div id="signText"></div>
-                            <br>
-
-
-                            <hr/>
-
-                            <p>
-                                <hr3>Days Until Your Birthday!</hr3>
-                                <div id="days"></div>
-                                <br>
-
-                                <hr/>
-
-                                <script src="birthday.js"></script>
+            </p>
+            <br>
+            <hr/>
+            <script src="birthday.js"></script>
 
     </center>
 </body>
