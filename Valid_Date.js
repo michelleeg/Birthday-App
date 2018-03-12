@@ -29,4 +29,4 @@ function displayFinalResult() {
         document.getElementById('result').textcontent = finalResult;
     }
 }
-clickbutton.addEventListener('click', displayFinalResult;)
+clickbutton.addEventListener('click', displayFinalResult);

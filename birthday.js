@@ -1,9 +1,8 @@
 var birthdayButton = document.getElementById('calculateAll');
 
-var signButton = document.getElementById('calculate');
 
-function getSign() {
-    var date = new Date(document.getElementById('inputDate').value);
+function getSign(input) {
+    var date = new Date(input);
     var month = date.getMonth();
     var day = date.getDate();
     var sign = "";
@@ -85,16 +84,7 @@ function getSign() {
 
 };
 
-function displaySign() {
-    var result = getSign();
-    document.getElementById('signText').textContent = result;
-}
-
-signButton.addEventListener('click', displaySign);
-
-var countDown = document.getElementById('calculate');
-
-function bDayCountDown() {
+function bDayCountDown(input) {
 
     var today = new Date();
     var bDay = new Date(document.getElementById('inputDate').value);
@@ -118,30 +108,13 @@ function bDayCountDown() {
 }
 
 
-
-function dayDisplay() {
-    var days = bDayCountDown();
-
-    document.getElementById('days').textContent = days;
-}
-
-countDown.addEventListener('click', dayDisplay);
-
-
-var button = document.getElementById('calculate');
-
-function calculateAge(inputDate) {
+function calculateAge(input) {
     var birthday = new Date(document.getElementById('inputDate').value);
     //var birthday = document.getElementById('inputDate').value
     var today = new Date();
     return Math.floor((new Date() - birthday) / 1000 / 60 / 60 / 24 / 365);
 }
 
-function displayAge() {
-    var age = "You are " + calculateAge() + " years of age.";
-    document.getElementById('age').textContent = age;
-}
-button.addEventListener('click', displayAge);
 
 function checkDate(input) {
     if (input.length != 10) {
@@ -162,7 +135,7 @@ function checkDate(input) {
 }
 
 function displayFinalResult() {
-    var date = documement.getElementById('inputDate').value;
+    var date = document.getElementById('inputDate').value;
     var invalid = "Sorry, but you did not enter a date in the correct format. Please try again.";
     if (checkDate(input) == false) {
         document.getElementById('result').textContent = invalid;
@@ -170,9 +143,10 @@ function displayFinalResult() {
         var result1 = getSign(input);
         var result2 = bDayCountdown(input);
         var result3 = calculateAge(input);
-        var finalResult = "You are" + result3 "years old, your zodiac sign is" + result1 ", and there are" + result2 "until your next birthday.";
-        document.getElementById('result').textcontent = finalResult;
+        var finalResult = "You are" + result3 + "years old, your zodiac sign is" + result1 + ", and there are" + result2 + "until your next birthday.";
+        document.getElementById('result').textContent = finalResult;
     }
-}
-birthdaybutton.addEventListener('click', displayFinalResult;)
+};
+
+birthdayButton.addEventListener('click', displayFinalResult);
 
