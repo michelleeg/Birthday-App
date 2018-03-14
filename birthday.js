@@ -137,7 +137,7 @@ function checkDate(input) {
 function displayFinalResult() {
     var date = document.getElementById('inputDate').value;
     var invalid = "Sorry, but you did not enter a date in the correct format. Please try again.";
-    if (checkDate(input) == false) {
+    if (checkDate(date) == false) {
         document.getElementById('result').textContent = invalid;
     } else {
         var result1 = getSign(input);
